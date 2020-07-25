@@ -7,14 +7,14 @@ var title = document.getElementById('_title');
 var artist = document.getElementById('_artist');
 
 audio.addEventListener('canplay', () => {
-    timeAct.innerHTML = formater(audio.currentTime);
-    timeFull.innerHTML = formater(audio.duration);
+    timeAct.innerHTML = formatter(audio.currentTime);
+    timeFull.innerHTML = formatter(audio.duration);
     progress.max = audio.duration;
     progress.value = audio.currentTime;
 }, false);
 
 audio.addEventListener('timeupdate', () => {
-    timeAct.innerHTML = formater(audio.currentTime);
+    timeAct.innerHTML = formatter(audio.currentTime);
     progress.value = audio.currentTime;
 }, false);
 
